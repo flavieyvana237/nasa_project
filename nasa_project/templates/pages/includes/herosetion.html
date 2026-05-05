@@ -1,0 +1,96 @@
+{% load static %}
+
+<section class="hero-section" style="background-image: url('{% static 'images/logo/hero1.png' %}')">
+  <!-- Overlay gradient -->
+  <div class="hero-overlay"></div>
+
+  <!-- Wrapper pour pousser le contenu en bas -->
+  <div class="hero-inner">
+    <!-- Contenu texte -->
+    <div class="hero-content">
+      <h1 class="hero-title">Humans in Space</h1>
+      <p class="hero-subtitle">
+        The Roscosmos Soyuz MS-29 mission, targeted to launch on Tuesday, July 14, will carry NASA astronaut Anil Menon and Roscosmos cosmonauts Pyotr Dubrov and Anna Kikina to the International Space
+        Station for an eight-month stay as part of Expeditions 74 and 75.
+      </p>
+      <a href="#" class="hero-btn">Roscosmos Soyuz MS-29</a>
+    </div>
+
+    <!-- BARRE DU BAS -->
+    <div class="hero-missions-bar">
+
+  <!-- Les 3 missions -->
+  <div class="hero-mission-item">
+    <p class="hero-mission-label">Current Mission</p>
+    <a href="#" class="hero-mission-link">
+      Expedition 74
+      <span class="hero-mission-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </span>
+    </a>
+  </div>
+
+  <div class="hero-mission-item">
+    <p class="hero-mission-label">Future Mission</p>
+    <a href="#" class="hero-mission-link">
+      NASA's SpaceX Crew-13
+      <span class="hero-mission-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </span>
+    </a>
+  </div>
+
+  <div class="hero-mission-item">
+    <p class="hero-mission-label">Benefits for Humanity</p>
+    <a href="#" class="hero-mission-link">
+      Space Station Updates
+      <span class="hero-mission-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </span>
+    </a>
+  </div>
+
+  <!-- ZONE DROITE : Image cercle + Play -->
+  <div class="hero-slider-controls">
+
+    <!-- Image miniature dans un cercle -->
+     
+   <!-- Ajoutez la balise <a> autour de l'image -->
+<a href="#" class="hero-thumb-circle" id="hero-thumb" style="display: block;">
+    <img src="{% static 'images/logo/herobare.png' %}" 
+         alt="slide preview"
+         class="w-full h-full object-cover" />
+</a>
+
+
+    <!-- Bouton Play/Pause -->
+    <button class="hero-play-btn" id="hero-play-btn" aria-label="Play slideshow">
+      <!-- Icone Play -->
+      <svg id="icon-play" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" 
+           fill="currentColor" viewBox="0 0 24 24">
+        <path d="M8 5v14l11-7z"/>
+      </svg>
+      <!-- Icone Pause (caché au début) -->
+      <svg id="icon-pause" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" 
+           fill="currentColor" viewBox="0 0 24 24">
+        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+      </svg>
+    </button>
+
+  </div>
+
+</div>
+  </div>
+</section>

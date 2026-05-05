@@ -1,0 +1,68 @@
+{% load static %}
+
+<div class="explore-dropdown hidden" id="explore-dropdown">
+
+  <!-- COLONNE GAUCHE : Liens -->
+  <nav class="explore-nav">
+    <a href="{% url 'home' %}" class="explore-nav-link explore-nav-active">Home</a>
+    <a href="#" class="explore-nav-link">Missions</a>
+    <a href="#" class="explore-nav-link">Humans in Space</a>
+    <a href="#" class="explore-nav-link">Earth</a>
+    <a href="#" class="explore-nav-link">The Solar System</a>
+    <a href="#" class="explore-nav-link">The Universe</a>
+    <a href="#" class="explore-nav-link">Science</a>
+    <a href="#" class="explore-nav-link">Aeronautics</a>
+    <a href="#" class="explore-nav-link">Technology</a>
+    <a href="#" class="explore-nav-link">Learning Resources</a>
+    <a href="#" class="explore-nav-link">About NASA</a>
+    <a href="#" class="explore-nav-link">Español</a>
+  </nav>
+
+  <!-- COLONNE DROITE : Articles -->
+  <div class="explore-articles">
+    <p class="explore-featured-label">Featured</p>
+    <div class="explore-articles-grid">
+
+      <a href="#" class="explore-article-card">
+        <div class="explore-article-img">
+          <img src="{% static 'images/logo/image.png' %}" alt="Article 1" />
+        </div>
+        <span class="news-read-time" style="color:#9ca3af;">4 Min Read</span>
+        <h4 class="explore-article-title">
+          NASA Laser Terminal Enhances Views During Artemis II Mission
+        </h4>
+        <div class="explore-article-meta">
+          <span class="news-label" style="color:#9ca3af;">Article · 3 Days Ago</span>
+        </div>
+      </a>
+
+      <a href="#" class="explore-article-card">
+        <div class="explore-article-img">
+          <img src="{% static 'images/feature/feature2.jpg' %}" alt="Article 2" />
+        </div>
+        <span class="news-read-time" style="color:#9ca3af;">5 Min Read</span>
+        <h4 class="explore-article-title">
+          NASA Fires Up Powerful Lithium-Fed Thruster for Trips to Mars
+        </h4>
+        <div class="explore-article-meta">
+          <span class="news-label" style="color:#9ca3af;">Article · 3 Days Ago</span>
+        </div>
+      </a>
+
+      <a href="#" class="explore-article-card">
+        <div class="explore-article-img">
+          <img src="{% static 'images/feature/feature3.webp' %}" alt="Article 3" />
+        </div>
+        <span class="news-read-time" style="color:#9ca3af;">5 Min Read</span>
+        <h4 class="explore-article-title">
+          NASA's Curiosity Finds Organic Molecules Never Seen Before on Mars
+        </h4>
+        <div class="explore-article-meta">
+          <span class="news-label" style="color:#9ca3af;">Article · 1 Week Ago</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+</div>

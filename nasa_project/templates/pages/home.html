@@ -1,3 +1,23 @@
 {% extends "base.html" %}
+{% load static %}
+{% block content %}
+  {% include "pages/includes/herosetion.html" %}
+  {% include "pages/includes/feature_new.html" %}
+  {% include "pages/includes/connecting.html" %}
+  {% include "pages/includes/welcome.html" %}
+  {% include "pages/includes/image_of_day.html" %}
+  {% include "pages/includes/nasa_images.html" %}
+  {% include "pages/includes/newsletter.html" %}
+  {% include "pages/includes/freedom.html" %}
+  {% include "pages/includes/more_topic.html" %}
+  {% include "pages/includes/footer.html" %}
+{% endblock content %}
 
+{% block inline_javascript %}
+  <script src="{% static 'js/hero.js' %}"></script>
+  
+  <script src="{% static 'js/dropdown_explore.js' %}"></script>
+  <script src="{% static 'js/dropdown_news.js' %}"></script>
+  <script src="{% static 'js/dropdown-multi.js' %}"></script>
 
+{% endblock inline_javascript %}

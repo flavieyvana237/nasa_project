@@ -1,0 +1,72 @@
+{% load static %}
+
+<header class="bg-black w-full border-b border-gray-800 relative">
+
+  <nav class="max-w-screen-3xl mx-auto px-16 py-5 flex items-center justify-between">
+
+    <!-- GAUCHE : Explore + Search -->
+    <div class="flex items-center gap-10">
+
+      <!-- Bouton Explore -->
+      <button class="nav-link flex items-center gap-3" id="explore-btn">
+        Explore
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+      </button>
+
+      <!-- Barre de recherche -->
+      <input type="text" placeholder="Search" class="nav-search" />
+
+    </div>
+
+    <!-- CENTRE : Logo NASA -->
+    <a href="{% url 'home' %}" class="absolute left-1/2 -translate-x-1/2">
+      <img src="{% static 'images/logo/logo.png' %}"
+           alt="NASA Logo"
+           style="width: 60px; height: 50.58px;" />
+    </a>
+
+    <!-- DROITE : Liens + NASA+ -->
+    <div class="flex items-center gap-6">
+      <!-- News & Events -->
+<div class="relative">
+  <button class="nav-link flex items-center gap-2" id="news-btn">
+    News & Events
+    <svg id="news-icon" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-200" fill="none"
+         viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+
+  {% include "pages/includes/dropdown_news.html" %}
+</div>
+      <!-- Multimedia -->
+<div class="relative">
+  <button class="nav-link flex items-center gap-2" id="multi-btn">
+    Multimedia
+    <svg id="multi-icon" xmlns="http://www.w3.org/2000/svg" 
+         class="h-4 w-4 transition-transform duration-200" fill="none"
+         viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+  {% include "pages/includes/dropdown_multi.html" %}
+</div>
+      <a href="#" class="nav-link flex items-center gap-2">
+        NASA+
+        <span class="nasa-live-badge hover:bg-red-500">LIVE</span>
+      </a>
+    </div>
+
+  </nav>
+
+  <!-- DROPDOWN : en dehors du nav, sous le header -->
+  {% include "pages/includes/dropdown_explore.html" %}
+
+</header>

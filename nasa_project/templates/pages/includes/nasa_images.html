@@ -1,0 +1,66 @@
+{% load static %}
+
+<section class="nasa-images-section">
+
+  <!-- TITRE -->
+  <h2 class="nasa-images-title">More NASA Images</h2>
+
+  <!-- 3 GROUPES -->
+  <div class="nasa-images-grid">
+
+    <!-- GROUPE 1 -->
+    <a href="#" class="nasa-gallery-group">
+      <div class="nasa-gallery-images">
+        <!-- Grande image gauche -->
+        <div class="nasa-gallery-img-main">
+          <img src="{% static 'images/nasa/nasa1.webp' %}" alt="Artemis crew" />
+        </div>
+        <!-- 2 petites images droite -->
+        <div class="nasa-gallery-img-small">
+          <img src="{% static 'images/nasa/nasa1-2.webp' %}" alt="Capsule" />
+        </div>
+        <div class="nasa-gallery-img-small">
+          <img src="{% static 'images/nasa/nasa1-3.jpg' %}" alt="Recovery" />
+        </div>
+      </div>
+      <h3 class="nasa-gallery-title">Artemis II Splashdown and Recovery Gallery</h3>
+      <p class="nasa-gallery-count">70 Images</p>
+    </a>
+
+    <!-- GROUPE 2 -->
+    <a href="#" class="nasa-gallery-group">
+      <div class="nasa-gallery-images">
+        <div class="nasa-gallery-img-main">
+          <img src="{% static 'images/nasa/nasa2-1.jpg' %}" alt="Moon flyby" />
+        </div>
+        <div class="nasa-gallery-img-small">
+          <img src="{% static 'images/nasa/nasa2-2.jpg' %}" alt="Space" />
+        </div>
+        <div class="nasa-gallery-img-small">
+          <img src="{% static 'images/nasa/nasa2-3.jpg' %}" alt="Astronaut" />
+        </div>
+      </div>
+      <h3 class="nasa-gallery-title">Artemis II Lunar Flyby Gallery</h3>
+      <p class="nasa-gallery-count">86 Images</p>
+    </a>
+
+    <!-- GROUPE 3 -->
+    <a href="#" class="nasa-gallery-group">
+      <div class="nasa-gallery-images">
+        <div class="nasa-gallery-img-main">
+          <img src="{% static 'images/nasa/nasa3-1.webp' %}" alt="Launch" />
+        </div>
+        <div class="nasa-gallery-img-small">
+          <img src="{% static 'images/nasa/nasa3-2.webp' %}" alt="Rocket trail" />
+        </div>
+        <div class="nasa-gallery-img-small">
+          <img src="{% static 'images/nasa/nasa3-3.webp' %}" alt="Crowd" />
+        </div>
+      </div>
+      <h3 class="nasa-gallery-title">Artemis II Launch Gallery</h3>
+      <p class="nasa-gallery-count">27 Images · 1 Videos</p>
+    </a>
+
+  </div>
+
+</section>

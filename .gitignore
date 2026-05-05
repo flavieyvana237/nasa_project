@@ -274,3 +274,7 @@ nasa_project/media/
 .env
 .envs/*
 !.envs/.local/
+nasa_project/static/css/output.css
+.envs/
+node_modules/
+package-lock.json

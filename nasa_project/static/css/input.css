@@ -1,0 +1,1057 @@
+@import "tailwindcss";
+
+/* ===== THEME ===== */
+@theme {
+  --color-primary: #0B3D91;
+  --color-secondary: #FC3D21;
+  --color-dark: #0B0F19;
+  --font-sans: "Public Sans", sans-serif;
+  --font-mono: "DM Mono", monospace;
+}
+
+@layer components {
+
+  /* ===== NAVBAR ===== */
+  .nav-link {
+    @apply text-white font-semibold bg-transparent border-none 
+           cursor-pointer transition-colors duration-200 hover:text-gray-300;
+    font-size: 1.1rem;
+    font-family: "Inter", sans-serif;
+  }
+
+  .nav-search {
+    @apply bg-transparent border border-gray-500 text-white
+           outline-none focus:border-white transition-colors duration-200;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.95rem;
+    font-family: "Inter", sans-serif;
+    border-radius: 2px;
+    width: 180px;
+  }
+
+  .nav-search::placeholder { @apply text-gray-400; }
+
+  .nasa-live-badge {
+    @apply text-white font-bold border border-secondary;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+    
+  }
+  
+
+  /* ===== EXPLORE DROPDOWN ===== */
+.explore-dropdown {
+  @apply absolute top-full left-0 w-screen
+         flex gap-0;
+  background-color: #000;
+  border-top: 1px solid #374151;
+  z-index: 9999;
+  padding: 2rem 4rem;
+  margin-left: 1rem;
+  min-height: 600px;
+}
+
+.explore-nav {
+  @apply flex flex-col gap-2;
+  min-width: 18rem;
+  border-right: 1px solid #374151;
+  padding-right: 3rem;
+ 
+  height: 100%;
+}
+
+.explore-nav-link {
+  @apply text-white no-underline
+         hover:underline transition-all duration-200;
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+}
+
+.explore-nav-active {
+  @apply underline;
+  text-decoration-style: dotted;
+}
+
+.explore-articles {
+  @apply flex flex-col gap-4;
+  padding-left: 3rem;
+  flex: 1;
+  height: 100%;
+}
+
+.explore-featured-label {
+  @apply uppercase text-gray-400;
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 3.5px;
+}
+
+.explore-articles-grid {
+  @apply grid gap-6;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.explore-article-card {
+  @apply flex flex-col gap-2 no-underline;
+}
+
+.explore-article-img {
+  @apply w-full overflow-hidden mb-2;
+  height: 19rem;
+   margin-top: 3rem;
+}
+
+.explore-article-img img {
+  @apply w-full h-full object-cover
+         transition-transform duration-300;
+}
+
+.explore-article-card:hover .explore-article-img img {
+  @apply scale-105;
+}
+
+.explore-article-title {
+  @apply font-bold text-white;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  line-height: 2rem;
+}
+
+.explore-article-meta {
+  @apply flex items-center gap-2;
+}
+
+/* ===== NEWS DROPDOWN ===== */
+.news-dropdown {
+  @apply absolute top-full right-0;
+  background-color: #000;
+  min-width: 18rem;
+  padding: 1.5rem 0;
+  z-index: 99999;
+  border-top: 1px solid #374151;
+}
+
+.news-dropdown-header {
+  @apply flex items-center justify-between gap-4;
+  padding: 0 1.5rem 1rem 1.5rem;
+  border-bottom: 1px solid #374151;
+  margin-bottom: 0.5rem;
+}
+
+.news-dropdown-title {
+  @apply font-bold text-white;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+}
+
+.news-dropdown-nav {
+  @apply flex flex-col;
+}
+
+.news-dropdown-link {
+  @apply text-white no-underline
+         hover:bg-gray-900 transition-colors duration-200;
+  font-family: "Public Sans", sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+}
+
+  /* ===== HERO ===== */
+  .hero-section {
+    @apply relative w-full flex flex-col justify-end
+           bg-cover bg-center bg-no-repeat;
+    min-height: 40rem;
+  }
+
+  .hero-overlay {
+    @apply absolute left-0 top-0 w-full h-full;
+    background: linear-gradient(65.99deg, #000 0, transparent 99%);
+    z-index: 200;
+  }
+
+  .hero-inner {
+    @apply relative w-full flex flex-col justify-between;
+    z-index: 999;
+    padding: 0 1rem 0 4rem;
+    min-height: 30rem;
+  }
+
+  .hero-content {
+    @apply pb-8;
+    max-width: 40rem;
+  }
+
+  .hero-title {
+    @apply text-white font-bold mb-4 whitespace-nowrap;
+    font-family: "Inter", sans-serif;
+    font-size: 4.5rem;
+    line-height: 1.05em;
+  }
+
+  .hero-subtitle {
+    @apply text-white mb-6;
+    font-family: "Public Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.65em;
+  }
+
+  .hero-btn {
+    @apply inline-block text-white font-semibold no-underline
+           rounded-md transition-colors duration-200;
+    background-color: #d83933;
+    padding: 0.75rem 1.5rem;
+    font-family: "Inter", sans-serif;
+  }
+
+  .hero-btn:hover { background-color: #b50909; }
+
+  .hero-missions-bar {
+    @apply flex border-t border-gray-600 gap-8;
+    padding: 1.2rem 0;
+  }
+
+  .hero-mission-item {
+    @apply flex-1 border-r border-gray-600 pr-8;
+  }
+
+  .hero-mission-item:last-child { @apply border-r-0; }
+
+  .hero-mission-label {
+    @apply text-gray-400 font-semibold uppercase mb-2;
+    font-family: "Inter", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+  }
+
+  .hero-mission-link {
+    @apply text-white font-bold no-underline flex items-center
+           hover:text-secondary transition-colors;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+  }
+
+  .hero-mission-arrow {
+    @apply inline-flex items-center justify-center rounded-full
+           text-white ml-2 flex-shrink-0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid #d83933;
+    background-color: #d83933;
+  }
+
+  .hero-slider-controls {
+    @apply flex items-center gap-3 ml-auto pl-8;
+  }
+
+  .hero-thumb-circle {
+    @apply relative flex-shrink-0;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    overflow: visible;
+  }
+
+  .hero-thumb-circle img {
+    @apply rounded-full object-cover block;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .hero-thumb-circle::after {
+    content: '';
+    @apply absolute rounded-full border-2 border-transparent;
+    top: -3px;
+    left: -3px;
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    border-top-color: white;
+    border-right-color: white;
+    animation: spin 1s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .hero-thumb-circle.loading::after { opacity: 1; }
+
+  .hero-play-btn {
+    @apply flex items-center justify-center cursor-pointer
+           text-white transition-colors duration-200
+           hover:bg-white/10;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: 4px solid #0b6cf4;
+    background: gray;
+  }
+
+  /* ===== FEATURED NEWS ===== */
+  .featured-section {
+    @apply bg-white mx-auto;
+    padding: 5rem 11rem;
+    max-width: 110rem;
+  }
+
+  .featured-header {
+    @apply flex items-center justify-between mb-8;
+  }
+
+  .featured-title {
+    @apply font-bold text-gray-900;
+    font-family: "Inter", sans-serif;
+    font-size: 3rem;
+    line-height: 0.95em;
+  }
+
+  .featured-link {
+    @apply font-bold text-gray-900 no-underline flex items-center gap-2
+           hover:text-secondary transition-colors duration-200;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+  }
+
+  .featured-grid-top {
+    @apply grid mb-1;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1.1rem;
+    margin-top: 6rem;
+  }
+
+  .news-card-col {
+    @apply flex flex-col mb-1;
+    gap: 1rem;
+  }
+
+  .news-card {
+    @apply relative overflow-hidden block no-underline;
+  }
+
+  .news-card:hover .news-card-img { @apply scale-105; }
+
+  .news-card-img {
+    @apply w-full h-full object-cover block transition-transform duration-300;
+  }
+
+  .news-card-large  { @apply h-88; }
+  .news-card-medium { @apply h-88; }
+  .news-card-small  { height: 10.8rem; }
+
+  .news-card-overlay {
+    @apply absolute left-0 top-0 w-full h-full;
+    background: linear-gradient(65.99deg, #000 0, transparent 99%);
+    z-index: 200;
+  }
+
+  .news-card-meta {
+    @apply flex flex-col items-start gap-1 mb-2;
+  }
+
+  .news-label {
+    @apply flex items-center gap-1 text-white uppercase;
+    font-family: "DM Mono", monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 3.5px;
+  }
+
+  .news-label-dark { @apply text-gray-500; }
+
+  .news-read-time {
+    @apply text-white uppercase;
+    font-family: "DM Mono", monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 3.5px;
+  }
+
+  .news-card-top {
+    @apply absolute top-0 left-0;
+    padding: 1rem 1.5rem;
+    z-index: 300;
+  }
+
+  .news-card-bottom {
+    @apply absolute bottom-0 left-0 w-full flex flex-col gap-1;
+    padding: 1.5rem;
+    z-index: 300;
+  }
+
+  .news-label-icon {
+    @apply inline-flex items-center justify-center rounded-full flex-shrink-0;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 1px solid rgba(255,255,255,0.6);
+    margin-right: 0.3rem;
+  }
+
+  .news-card-title {
+    @apply font-bold text-white;
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.15em;
+  }
+
+  .news-card-title-sm { font-size: 1rem; }
+
+  .featured-grid-bottom {
+    @apply grid gap-6 mt-6;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .news-small-card {
+    @apply flex items-start gap-4 no-underline text-gray-900;
+  }
+
+  .news-small-card:hover .news-small-title { color: #5433d8; }
+
+  .news-small-thumb {
+    @apply rounded-full overflow-hidden flex-shrink-0 relative;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .news-small-thumb img {
+    @apply w-full h-full object-cover transition-transform duration-300;
+  }
+
+  .news-small-card:hover .news-small-thumb img { @apply scale-105; }
+
+  .news-small-body { @apply flex flex-col gap-1; }
+
+  .news-small-title {
+    @apply font-bold text-gray-900 transition-colors duration-200;
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.3em;
+  }
+
+  /* ===== CONNECTING ===== */
+  .connecting-section {
+    @apply relative w-full flex items-end bg-cover bg-center bg-no-repeat;
+    min-height: 48rem;
+  }
+
+  .connecting-content {
+    @apply relative mt-12;
+    z-index: 300;
+    padding: 6rem 16rem;
+    max-width: 69rem;
+  }
+
+  .connecting-title {
+    @apply font-bold text-white mb-4;
+    font-family: "Inter", sans-serif;
+    font-size: 3rem;
+    line-height: 0.95em;
+  }
+
+  .connecting-subtitle {
+    @apply text-white mt-4 mb-8;
+    font-family: "Public Sans", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.65em;
+  }
+
+  .connecting-link {
+    @apply font-bold text-white no-underline flex items-center gap-3
+           hover:opacity-80 transition-opacity duration-200;
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem;
+  }
+
+  /* ===== WELCOME SECTION ===== */
+.welcome-section {
+  @apply bg-white mx-auto;
+  padding: 3.5rem 11rem 1.5rem 11rem;
+  max-width: 110rem;
+ margin-top: 4rem; 
+}
+
+.welcome-header {
+  @apply flex items-center justify-between mb-12;
+  margin-top: 2rem;
+  
+}
+
+.welcome-title {
+  @apply font-bold text-gray-900;
+  font-family: "Inter", sans-serif;
+  font-size: 3rem;
+  line-height: 0.95em;
+  
+}
+
+.welcome-grid {
+  @apply grid gap-4;
+  grid-template-columns: repeat(4, 1fr);
+  magin-top: 2rem;
+}
+
+.welcome-card {
+  @apply relative overflow-hidden block no-underline;
+  height: 30rem;
+  margin-bottom: 5rem;
+}
+
+.welcome-card:hover .welcome-card-img {
+  @apply scale-105;
+}
+
+.welcome-card-img {
+  @apply absolute left-0 top-0 w-full h-full 
+         object-cover transition-transform duration-500;
+}
+
+.welcome-card-overlay {
+  @apply absolute left-0 top-0 w-full h-full;
+  background: linear-gradient(0deg, #000 0, transparent 60%);
+  z-index: 200;
+  
+}
+
+.welcome-card-body {
+  @apply absolute bottom-0 left-0 w-full
+         flex items-end justify-between p-6;
+  z-index: 300;
+}
+
+.welcome-card-title {
+  @apply text-white font-bold;
+  font-family: "Inter", sans-serif;
+  font-size: 1.813rem;
+  line-height: 1.05em;
+  
+}
+
+/* ===== IMAGE OF THE DAY ===== */
+.iotd-section {
+  @apply flex items-start bg-white mx-auto;
+  padding: 4rem 11rem;
+  max-width: 110rem;
+ 
+}
+
+.iotd-text {
+  @apply flex flex-col justify-start;
+  width: 33.33%;
+  padding-right: 2.5rem;
+}
+
+.iotd-label {
+  @apply uppercase text-gray-500;
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 3.5px;
+  margin-bottom: 1.5rem;
+}
+
+.iotd-title {
+  @apply font-bold text-gray-900 mb-8;
+  font-family: "Inter", sans-serif;
+  font-size: 2.562rem;
+  line-height: .95em;
+  margin-bottom: 4.5rem;
+ 
+}
+
+.iotd-subtitle {
+  @apply font-bold text-gray-900 mb-4;
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.3em;
+}
+
+.iotd-description {
+  @apply text-gray-700 mb-6;
+  font-family: "Public Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.65em;
+}
+
+.iotd-image-wrapper {
+  @apply relative flex flex-col;
+  width: 67%;
+  background-color: #f6f6f6;
+}
+
+.iotd-download-btn {
+  @apply absolute top-4 right-4 z-10
+         flex items-center justify-center
+         rounded-full text-white
+         transition-opacity duration-200 hover:opacity-80;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #0b3d91;
+}
+
+.iotd-figure {
+  @apply flex justify-center w-full m-0;
+}
+
+.iotd-img {
+  @apply block w-auto;
+  max-height: 32rem;
+  object-fit: contain;
+}
+
+.iotd-view-link {
+  @apply flex items-center justify-end gap-2
+         font-bold text-gray-900 no-underline
+         pt-3 pr-2
+         hover:text-secondary transition-colors duration-200;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+}
+
+/* ===== NASA IMAGES ===== */
+.nasa-images-section {
+  @apply bg-white mx-auto;
+  padding: 3.5rem 11rem 1.5rem 11rem;
+  max-width: 110rem;
+}
+
+.nasa-images-title {
+  @apply font-bold text-gray-900 mb-12;
+  font-family: "Inter", sans-serif;
+  font-size: 3rem;
+  line-height: 0.95em;
+}
+
+/* 3 groupes côte à côte */
+.nasa-images-grid {
+  @apply grid gap-8;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Chaque groupe cliquable */
+.nasa-gallery-group {
+  @apply block no-underline text-gray-900 mb-4;
+}
+
+/* La mini grille d'images */
+.nasa-gallery-images {
+  @apply mb-4;
+  display: grid;
+  gap: 0.25rem;
+  grid-template-columns: 1.75fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 15rem;
+}
+
+/* Grande image — occupe 2 lignes */
+.nasa-gallery-img-main {
+  @apply relative overflow-hidden;
+  grid-row: 1 / 3;
+}
+
+.nasa-gallery-img-main img {
+  @apply absolute left-0 top-0 w-full h-full object-cover
+         transition-transform duration-500;
+}
+
+.nasa-gallery-group:hover .nasa-gallery-img-main img {
+  @apply scale-105;
+}
+
+/* Petites images */
+.nasa-gallery-img-small {
+  @apply relative overflow-hidden;
+}
+
+.nasa-gallery-img-small img {
+  @apply absolute left-0 top-0 w-full h-full object-cover
+         transition-transform duration-500;
+}
+
+.nasa-gallery-group:hover .nasa-gallery-img-small img {
+  @apply scale-105;
+}
+
+/* Titre du groupe */
+.nasa-gallery-title {
+  @apply font-bold text-gray-900 mb-2;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.3em;
+}
+
+/* Compteur */
+.nasa-gallery-count {
+  @apply uppercase text-gray-500;
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 3.5px;
+}
+
+/* ===== NEWSLETTER ===== */
+.newsletter-section {
+  @apply relative w-full flex items-end
+         bg-cover bg-no-repeat;
+  min-height: 35rem;
+  background-position: 32% 38%;
+}
+
+.newsletter-overlay {
+  @apply absolute left-0 top-0 w-full h-full;
+  background: linear-gradient(65.99deg, rgba(0,0,0,0.4) 0, transparent 70%);
+  z-index: 200;
+}
+
+.newsletter-content {
+  @apply relative flex flex-col gap-4;
+  z-index: 300;
+  padding: 4rem 16rem;
+  max-width: 65rem;
+ 
+}
+
+.newsletter-title {
+  @apply font-bold text-white;
+  font-family: "Inter", sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.05em;
+   margin-bottom: 2rem;
+}
+
+.newsletter-subtitle {
+  @apply font-bold text-white;
+  font-family: "Public Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.65em;
+ 
+}
+
+.newsletter-privacy {
+  @apply text-white;
+  font-family: "Public Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.newsletter-privacy-link {
+  @apply text-white underline decoration-dotted
+         hover:opacity-80 transition-opacity;
+}
+
+/* ===== FREEDOM SECTION ===== */
+.freedom-section {
+  @apply flex items-start w-full mx-auto;
+  background-color: #f6f6f6;
+  padding: 4rem 11rem;
+  max-width: 110rem;
+  gap: 4rem;
+  padding-top: 6rem;
+  margin-left: auto
+}
+
+.freedom-text {
+  @apply flex flex-col gap-4;
+  width: 50%;
+  padding-top: 3rem;
+
+}
+
+.freedom-label {
+  @apply font-bold text-gray-900;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  line-height: 0.95em;
+  margin-bottom: 2.5rem;
+}
+
+.freedom-title {
+  @apply font-bold text-gray-900;
+  font-family: "Inter", sans-serif;
+  font-size: 3rem;
+  line-height: 1.05em;
+  margin-bottom: 2rem;
+}
+
+.freedom-subtitle {
+  @apply font-bold text-gray-900;
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.25;
+}
+
+.freedom-description {
+  @apply text-gray-700;
+  font-family: "Public Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.65em;
+}
+
+.freedom-link {
+  @apply font-bold text-gray-900 no-underline
+         flex items-center gap-2
+         hover:opacity-80 transition-opacity duration-200;
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+}
+
+.freedom-image-col {
+  @apply flex flex-col gap-2;
+  width: 50%;
+}
+
+.freedom-figure {
+  @apply w-full m-0 overflow-hidden;
+}
+
+.freedom-img {
+  @apply w-full object-cover block;
+}
+
+.freedom-caption {
+  font-family: "Public Sans", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  color: #58585b;
+}
+
+.freedom-credits {
+  @apply font-bold;
+  font-family: "Public Sans", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  color: #000;
+}
+
+/* ===== FOOTER ===== */
+.footer-main {
+  @apply w-full;
+  background-color: #000;
+  padding: 3rem 11rem;
+}
+
+.footer-top {
+  @apply grid gap-8;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+}
+
+.footer-brand {
+  @apply flex flex-col gap-4;
+}
+
+.footer-brand-title {
+  @apply font-bold text-white;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.3em;
+}
+
+.footer-brand-desc {
+  @apply text-gray-400;
+  font-family: "Public Sans", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.65em;
+}
+
+.footer-text-link {
+  @apply text-white no-underline hover:underline
+         transition-all duration-200;
+  font-family: "Public Sans", sans-serif;
+  font-size: 0.9rem;
+}
+
+.footer-join-link {
+  @apply font-bold text-white no-underline
+         flex items-center gap-2
+         hover:opacity-80 transition-opacity duration-200;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+}
+
+.footer-nav-col {
+  @apply flex flex-col gap-3;
+}
+
+.footer-nav-link {
+  @apply text-white no-underline
+         hover:underline transition-all duration-200;
+  font-family: "Public Sans", sans-serif;
+  font-size: 0.95rem;
+}
+
+.footer-social-col {
+  @apply flex flex-col gap-3;
+}
+
+.footer-social-title {
+  @apply font-bold text-white;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+}
+
+.footer-social-icons {
+  @apply flex items-center gap-3;
+}
+
+.footer-social-btn {
+  @apply flex items-center justify-center rounded-full
+         text-white border border-gray-600
+         hover:border-white transition-colors duration-200;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.footer-divider {
+  @apply w-full border-t border-gray-700 my-8;
+}
+
+.footer-bottom {
+  @apply flex flex-col gap-4;
+}
+
+.footer-legal-links {
+  @apply flex flex-wrap gap-x-6 gap-y-2;
+}
+
+.footer-legal-link {
+  @apply text-white no-underline text-sm
+         hover:underline transition-all duration-200;
+  font-family: "Public Sans", sans-serif;
+}
+
+.footer-page-info {
+  @apply flex flex-wrap gap-x-8 gap-y-1;
+}
+
+.footer-page-meta {
+  @apply text-gray-400 text-sm;
+  font-family: "Public Sans", sans-serif;
+}
+
+.footer-page-meta strong {
+  @apply text-white;
+}
+}
+
+/* ===== RESPONSIVE ===== */
+@layer utilities {
+
+  @media (max-width: 1024px) {
+  .footer-main { padding: 3rem 4rem; }
+  .footer-top { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .footer-main { padding: 2rem 1.5rem; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .footer-legal-links { gap: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  .footer-top { grid-template-columns: 1fr; }
+}
+
+  @media (max-width: 1024px) {
+  .freedom-section { padding: 3rem 4rem; }
+}
+
+@media (max-width: 768px) {
+  .freedom-section {
+    @apply flex-col;
+    padding: 2rem 1.5rem;
+  }
+  .freedom-text { width: 100%; }
+  .freedom-image-col { width: 100%; }
+  .freedom-title { font-size: 2rem; }
+}
+
+  @media (max-width: 1024px) {
+  .newsletter-content { padding: 3rem 4rem; }
+}
+
+@media (max-width: 768px) {
+  .newsletter-content { padding: 2rem 1.5rem; }
+  .newsletter-title { font-size: 2.5rem; }
+  .newsletter-section { min-height: 24rem; }
+}
+
+@media (max-width: 480px) {
+  .newsletter-title { font-size: 2rem; }
+}
+
+  @media (max-width: 1024px) {
+  .nasa-images-section { padding: 3rem 4rem; }
+  .nasa-images-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .nasa-images-section { padding: 2rem 1.5rem; }
+  .nasa-images-grid { grid-template-columns: 1fr; }
+  .nasa-images-title { font-size: 2rem; }
+}
+  @media (max-width: 1024px) {
+  .iotd-section { padding: 3rem 4rem; }
+}
+
+@media (max-width: 768px) {
+  .iotd-section {
+    @apply flex-col;
+    padding: 2rem 1.5rem;
+  }
+  .iotd-text { width: 100%; padding-right: 0; }
+  .iotd-image-wrapper { width: 100%; }
+  .iotd-title { font-size: 2rem; }
+}
+
+  @media (max-width: 1024px) {
+    .featured-section { padding: 3rem 4rem; }
+    .connecting-content { padding: 3rem 4rem; }
+    .featured-grid-top { grid-template-columns: 1fr 1fr; }
+    .news-card-col { flex-direction: row; }
+    .news-card-small { height: 14rem; }
+  }
+
+  @media (max-width: 768px) {
+    .hero-title { font-size: 2.5rem; white-space: normal; }
+    .hero-inner { padding: 0 1rem; }
+    .hero-missions-bar { flex-direction: column; gap: 1rem; }
+    .hero-mission-item { @apply border-r-0 border-b border-gray-600 pb-4 pr-0; }
+    .featured-section { padding: 2rem 1.5rem; }
+    .featured-title { font-size: 2rem; }
+    .featured-grid-top { grid-template-columns: 1fr; }
+    .news-card-col { flex-direction: column; }
+    .featured-grid-bottom { grid-template-columns: repeat(2, 1fr); }
+    .connecting-section { min-height: 30rem; }
+    .connecting-content { padding: 2rem 1.5rem; }
+    .connecting-title { font-size: 2rem; }
+    .connecting-subtitle { font-size: 1rem; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title { font-size: 2rem; }
+    .featured-grid-bottom { grid-template-columns: 1fr; }
+    .featured-grid-top { grid-template-columns: 1fr; }
+    .news-card-large, .news-card-medium { height: 16rem; }
+  }
+
+@media (max-width: 1024px) {
+  .welcome-section { padding: 3rem 4rem; }
+  .welcome-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .welcome-section { padding: 2rem 1.5rem; }
+  .welcome-grid { grid-template-columns: repeat(2, 1fr); }
+  .welcome-title { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .welcome-grid { grid-template-columns: 1fr; }
+}
+  
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@source "../../../nasa_project/templates/**/*.html";
+@source "../../../nasa_project/**/*.html";
+@source "../../../nasa_project/static/**/*.js";

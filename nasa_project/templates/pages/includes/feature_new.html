@@ -1,0 +1,194 @@
+{% load static %}
+
+<section class="featured-section">
+  <!-- EN-TÊTE -->
+  <div class="featured-header">
+    <h2 class="featured-title">Featured News</h2>
+    <a href="#" class="featured-link">
+      Recently Published
+      <span class="hero-mission-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </span>
+    </a>
+  </div>
+
+  <!-- RANGÉE 1 : Grandes cartes -->
+<div class="featured-grid-top">
+
+  <!-- Grande carte (50%) -->
+  <a href="#" class="news-card news-card-large">
+    <img src="{% static 'images/feature/feature1.jpg' %}" alt="Artemis" class="news-card-img" />
+    <div class="news-card-overlay"></div>
+
+    <!-- HAUT : Blog -->
+    <div class="news-card-top">
+      <span class="news-label">
+        <span class="news-label-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10l6 6v8a2 2 0 01-2 2z" />
+          </svg>
+        </span>
+        Blog
+      </span>
+    </div>
+
+    <!-- BAS : Min Read + Titre -->
+    <div class="news-card-bottom">
+      <span class="news-read-time">4 Min Read</span>
+      <h3 class="news-card-title">
+        NASA's Artemis III Moon Rocket Hardware Arrives, Artemis II Capsule Returns to Kennedy
+      </h3>
+    </div>
+  </a>
+
+  <!-- Carte moyenne (25%) -->
+  <a href="#" class="news-card news-card-medium">
+    <img src="{% static 'images/feature/feature2.jpg' %}" alt="X-59" class="news-card-img" />
+    <div class="news-card-overlay"></div>
+
+    <!-- HAUT : Blog -->
+    <div class="news-card-top">
+      <span class="news-label">
+        <span class="news-label-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10l6 6v8a2 2 0 01-2 2z" />
+          </svg>
+        </span>
+        Blog
+      </span>
+    </div>
+
+    <!-- BAS : Min Read + Titre -->
+    <div class="news-card-bottom">
+      <span class="news-read-time">2 Min Read</span>
+      <h3 class="news-card-title">
+        NASA's X-59 Shows Off Early Flight Test Maneuvers
+      </h3>
+    </div>
+  </a>
+
+  <!-- Colonne droite : 2 petites cartes (25%) -->
+  <div class="news-card-col">
+
+    <a href="#" class="news-card news-card-small">
+      <img src="{% static 'images/feature/feature3.webp' %}" alt="Life Science" class="news-card-img" />
+      <div class="news-card-overlay"></div>
+
+      <!-- HAUT : Blog -->
+      <div class="news-card-top">
+        <span class="news-label">
+          <span class="news-label-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10l6 6v8a2 2 0 01-2 2z" />
+            </svg>
+          </span>
+          Blog
+        </span>
+      </div>
+
+      <!-- BAS : Min Read + Titre -->
+      <div class="news-card-bottom">
+        <span class="news-read-time">2 Min Read</span>
+        <h3 class="news-card-title news-card-title-sm">
+          Life Science, Space Gardening Top Thursday's Research Schedule
+        </h3>
+      </div>
+    </a>
+
+    <a href="#" class="news-card news-card-small">
+      <img src="{% static 'images/feature/feature4.png' %}" alt="Morocco" class="news-card-img" />
+      <div class="news-card-overlay"></div>
+
+      <!-- HAUT : Article -->
+      <div class="news-card-top">
+        <span class="news-label">
+          <span class="news-label-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5l5 5v11a2 2 0 01-2 2z" />
+            </svg>
+          </span>
+          Article
+        </span>
+      </div>
+
+      <!-- BAS : Min Read + Titre -->
+      <div class="news-card-bottom">
+        <span class="news-read-time">2 Min Read</span>
+        <h3 class="news-card-title news-card-title-sm">
+          NASA Welcomes Morocco as 64th Artemis Accords Signatory
+        </h3>
+      </div>
+    </a>
+
+  </div>
+</div>
+  <!-- RANGÉE 2 : Petites cartes horizontales -->
+  <div class="featured-grid-bottom">
+    <a href="#" class="news-small-card">
+      <div class="news-small-thumb">
+        <img src="{% static 'images/feature/featurepro1.webp' %}" alt="" />
+      </div>
+      <div class="news-small-body">
+        <span class="news-read-time" style="color: #6b7280">3 Min Read</span>
+        <p class="news-small-title">NASA Explores Prioritizing First Response Drones in Crowded Skies</p>
+        <span class="news-label news-label-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" class="inline h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5l5 5v11a2 2 0 01-2 2z" />
+          </svg>
+          Article
+        </span>
+      </div>
+    </a>
+
+    <!-- Version statique si pas de données Django -->
+    <a href="#" class="news-small-card">
+      <div class="news-small-thumb">
+        <img src="{% static 'images/feature/featurepro2.webp' %}" alt="" />
+      </div>
+      <div class="news-small-body">
+        <span class="news-read-time" style="color: #6b7280">3 Min Read</span>
+        <p class="news-small-title">Winter's End Is Written in the Clouds</p>
+        <span class="news-label news-label-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5l5 5v11a2 2 0 01-2 2z" />
+          </svg>
+          Article
+        </span>
+      </div>
+    </a>
+
+    <a href="#" class="news-small-card">
+      <div class="news-small-thumb">
+        <img src="{% static 'images/feature/featurepro3.webp' %}" alt="" />
+      </div>
+      <div class="news-small-body">
+        <span class="news-read-time" style="color: #6b7280">3 Min Read</span>
+        <p class="news-small-title">Curiosity Blog, Sols 4873-4878: Welcome to the Atacama Drill Target</p>
+        <span class="news-label news-label-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5l5 5v11a2 2 0 01-2 2z" />
+          </svg>
+          Article
+        </span>
+      </div>
+    </a>
+
+    <a href="#" class="news-small-card">
+      <div class="news-small-thumb">
+        <img src="{% static 'images/feature/featurepro4.jpg' %}" alt="" />
+      </div>
+      <div class="news-small-body">
+        <span class="news-read-time" style="color: #6b7280">3 Min Read</span>
+        <p class="news-small-title">What's Up: May 2026 Skywatching Tips from NASA</p>
+        <span class="news-label news-label-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5l5 5v11a2 2 0 01-2 2z" />
+          </svg>
+          Article
+        </span>
+      </div>
+    </a>
+  </div>
+</section>

@@ -1,0 +1,69 @@
+{% load static %}
+
+<section class="iotd-section">
+
+  <!-- COLONNE GAUCHE : Texte -->
+  <div class="iotd-text">
+
+    <p class="iotd-label">Today</p>
+    <h2 class="iotd-title">Image Of The Day</h2>
+
+    <h3 class="iotd-subtitle">
+      Artemis III Rocket Core Stage Moves to NASA Kennedy
+    </h3>
+
+    <p class="iotd-description">
+      NASA's SLS (Space Launch System) core stage for the Artemis III mission 
+      moves into the Vehicle Assembly Building at the agency's Kennedy Space 
+      Center in Florida on Tuesday, April 28, 2026.
+    </p>
+
+    <a href="#" class="connecting-link" style="font-size: 1rem; color: #1D4ED8;">
+      
+       
+      Browse Image Archive
+      <span class="hero-mission-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </span>
+    </a>
+
+  </div>
+
+  <!-- COLONNE DROITE : Image -->
+  <div class="iotd-image-wrapper">
+
+    <!-- Bouton download en haut à droite -->
+    <a href="#" class="iotd-download-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+      </svg>
+    </a>
+
+    <!-- Image -->
+    <a href="#" class="iotd-figure">
+      <img src="{% static 'images/freedom/image.png' %}"
+           alt="Artemis III Rocket"
+           class="iotd-img" />
+    </a>
+
+    <!-- Lien View image en bas à droite -->
+    <a href="#" class="iotd-view-link">
+      View image
+      <span class="hero-mission-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </span>
+    </a>
+
+  </div>
+
+</section>
